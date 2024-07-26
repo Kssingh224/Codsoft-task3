@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#calculator {
+  background-color: #555;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+}
+
+#display {
+  grid-column: span 4;
+  background-color: #333;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  font-size: 1.5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.button {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #888;
+}
+
+.operator {
+  background-color: #FF9500; /* Orange color for operators */
+}
+
+#clear {
+  background-color: #FF4D4D; /* Red color for clear button */
+}
+
+#equals {
+  background-color: #00CC00; /* Green color for equals button */
+}
+
+/* Grid areas for specific button types */
+#clear {
+  grid-column: 1 / span 2;
+}
+
+#equals {
+  grid-column: 3 / span 2;
+}
+
+.numbers {
+  grid-area: numbers;
+}
+
+.operators {
+  grid-area: operators;
+}
+
+#zero {
+  grid-column: 1 / span 2;
+}
+
+#decimal {
+  grid-column: 3;
+}
+
+#display {
+  grid-column: span 4;
+  background-color: #666;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  font-size: 1.5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
